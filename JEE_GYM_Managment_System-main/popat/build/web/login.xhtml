@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            user
+        </title>
+        <!-- == Favicon == -->
+        <link rel="shortcut icon" href="#{facesContext.externalContext.requestContextPath}/user/assets/img/favicon.ico" type="image/x-icon" />
+        <!-- == Google Fonts == -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500i,700,900,900i" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200,400,500,600,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Exo:400" rel="stylesheet" />
+        <!-- == Bootstrap CSS == -->
+        <link href="#{facesContext.externalContext.requestContextPath}/user/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <!-- == Font-awesome Icons CSS == -->
+        <link href="#{facesContext.externalContext.requestContextPath}/user/assets/css/font-awesome.min.css" rel="stylesheet" />
+        <!-- == Pe Icon 7 Min Icons CSS == -->
+        <link href="#{facesContext.externalContext.requestContextPath}/user/assets/css/pe-icon-7-stroke.min.css" rel="stylesheet" />
+        <!-- == Animate CSS == -->
+        <link href="#{facesContext.externalContext.requestContextPath}/user/assets/css/animate.css" rel="stylesheet" />
+        <!-- == Aos CSS == -->
+        <link href="#{facesContext.externalContext.requestContextPath}/user/assets/css/aos.css" rel="stylesheet" />
+        <!-- == FancyBox CSS == -->
+        <link href="#{facesContext.externalContext.requestContextPath}/user/assets/css/jquery.fancybox.min.css" rel="stylesheet" />
+        <!-- == Slicknav CSS == -->
+        <link href="#{facesContext.externalContext.requestContextPath}/user/assets/css/slicknav.css" rel="stylesheet" />
+        <!-- == Swiper CSS == -->
+        <link href="#{facesContext.externalContext.requestContextPath}/user/assets/css/swiper.min.css" rel="stylesheet" />
+        <!-- == Slick CSS == -->
+        <link href="#{facesContext.externalContext.requestContextPath}/user/assets/css/slick.css" rel="stylesheet" />
+        <!-- == Main Style CSS == -->
+        <link href="#{facesContext.externalContext.requestContextPath}/user/assets/css/style.css" rel="stylesheet" />
+        <style>
+            [data-aos^=fade][data-aos^=fade] {
+                opacity: unset;
+                transition-property: opacity, transform;
+            }
+
+            .header-area.header-default {
+                padding: 15px 0;
+            }
+
+            .header-area.header-transparent {
+                background-color: black;
+            }
+
+            .service-area.service-default-area {
+                padding: unset;
+            }
+
+            .classical-workout-area {
+                padding: unset;
+            }
+
+            .gallery-slider-content {
+                padding: 60px 0px 0px 0px;
+            }
+
+            .team-area.team-default-area {
+                padding: 0px 0 131px;
+            }
+
+            .blog-area.blog-default-area {
+                padding: 0px 0 131px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- wrapper start -->
+        <div class="wrapper home-default-wrapper">
+            <!-- == Start Header Wrapper == -->
+            <header class="header-area header-default header-transparent header-style sticky-header">
+                <div class="container">
+                    <div class="row row-gutter-0 align-items-center">
+                        <div class="col-4 col-xs-3 col-sm-3 col-md-3 col-xl-3">
+                            <div class="header-logo-area">
+                                <a href="index.xhtml">
+                                    <img class="logo-main" src="#{facesContext.externalContext.requestContextPath}/user/assets/img/logo-light.png" alt="Logo" />
+                                    <img class="logo-light" src="#{facesContext.externalContext.requestContextPath}/user/assets/img/logo-light.png" alt="Logo" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-8 col-sm-9 col-xl-9">
+                            <div class="header-align">
+                                <div class="header-navigation-area d-none d-xl-block">
+                                    <ul class="main-menu nav position-relative">
+                                        <li>
+                                            <h:link  outcome="index">
+                                                <span>Home</span>
+                                            </h:link>
+                                        </li>
+                                        <li>
+                                            <h:link  outcome="trainers">
+                                                <span>Trainer</span>
+                                            </h:link>
+                                        </li>
+                                        <li>
+                                            <h:link  outcome="plan">
+                                                <span>Plan</span>
+                                            </h:link>
+                                        </li>
+                                        <li>
+                                            <h:link  outcome="blogs">
+                                                <span>Blog</span>
+                                            </h:link>
+                                        </li>
+                                        <li>
+                                            <h:link  outcome="contact">
+                                                <span>Contact</span>
+                                            </h:link>
+                                        </li>
+                                        <li class="has-submenu">
+                                            <!--                                            <a href="#">
+                                                                                            Pramesh Kikani
+                                                                                        </a>-->
+                                            <ul class="submenu-nav">
+                                                <li>
+                                                    <a href="edit_profile.xhtml">
+                                                        Edit Profile
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="payment_history.xhtml">
+                                                        Payment History
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="logout.xhtml">
+                                                        Logout
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="login.xhtml">
+                                                Login
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- == End Header Wrapper == -->
+            <main class="main-content">
+                <!--== Start Page Title Area ==-->
+                <section class="page-title-area bg-img" data-bg-img="#{facesContext.externalContext.requestContextPath}/user/assets/img/photos/bg-page2.jpg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="page-title-content content-style2">
+                                    <h2 class="title"><span>MY</span> ACCOUNT</h2>
+                                    <div class="desc">
+                                        <p class="ml-0">We have very professional and exprt Instructor and they can very
+                                            important
+                                            to maintain <br></br>br>our health luptas sit fugit, sed quia cuuntur magni
+                                            dolores some
+                                            products</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--== End Page Title Area ==-->
+
+                <!--== Start Contact Area ==-->
+                <div class="account-login-area">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7 m-auto">
+                                <div class="login-top">
+                                    <nav class="login-form-nav">
+                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                                    aria-selected="true">Login</button>
+                                            <button class="nav-link nav-register" id="nav-profile-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#nav-profile" type="button" role="tab"
+                                                    aria-controls="nav-profile" aria-selected="false">Register</button>
+                                        </div>
+                                    </nav>
+                                </div>
+                                <div class="login-bottom">
+                                    <div class="login-form-content tab-content" id="nav-tabContent">
+                                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                             aria-labelledby="nav-home-tab">
+                                            <div class="login-form">
+                                                <!--                                            <form class="login-form-wrapper" id="login-form"
+                                                                                                
+                                                                                                method="post">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-lg-12">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-12">
+                                                                                                                <div class="form-group">
+                                                                                                                    <label for="UserName" class="form-label">Username or
+                                                                                                                        email
+                                                                                                                        address *</label>
+                                                                                                                    <input type="email" class="form-control"
+                                                                                                                        id="UserName" />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-12">
+                                                                                                                <div class="form-group mb-0">
+                                                                                                                    <label for="password"
+                                                                                                                        class="form-label mt-15">Password
+                                                                                                                        *</label>
+                                                                                                                    <input type="password" class="form-control"
+                                                                                                                        id="password" />
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-12">
+                                                                                                                <div class="form-group mt-15">
+                                                                                                                    <input type="checkbox" class="form-check-input"
+                                                                                                                        id="exampleCheck1" />
+                                                                                                                    <label class="form-check-label" for="exampleCheck1">
+                                                                                                                        Remember me</label>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                            <div class="col-md-12">
+                                                                                                                <div class="form-group form-group-info">
+                                                                                                                    <button class="btn btn-theme btn-black"
+                                                                                                                        type="button">Log
+                                                                                                                        in</button>
+                                                                                                                    <a class="btn-forgot" href="shop-account.html">Lost
+                                                                                                                        your
+                                                                                                                        password?</a>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </form>-->
+
+
+
+
+                                                <form method="POST" class="login-form-wrapper">
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+
+                                                                        <!--<td>User Name</td> <td><input type="text" name="username"  value=""/></td></tr>-->
+
+                                                                        <label for="UserName" class="form-label">Username</label>
+                                                                        <input type="text" class="form-control"  name="username"  value=""/>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group mb-0">
+
+                                                                        <!--<tr>   <td>Password </td> <td><input type="password" name="password" value=""/></td></tr>-->
+
+                                                                        <label for="password"
+                                                                               class="form-label mt-15">Password
+                                                                            *</label>
+                                                                        <input type="password" class="form-control" name="password" value=""/>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group form-group-info">
+                                                                        <input class="btn btn-theme btn-black"
+                                                                               type="submit" value="Login">
+
+                                                                        </input>
+                                                                        <!--                                                                    <a class="btn-forgot" href="shop-account.html">Lost
+                                                                                                                                                your
+                                                                                                                                                password?</a>-->
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!--<tr><td><input type="submit" value="Login"/></td><td><input type="reset" value="Reset"/></td></tr>-->
+
+
+                                                </form>
+                                                <br/>
+                                                <h:outputText id="err" style="color:red" value="#{loginBean.errorStatus}"/>
+
+                                            </div>
+                                            <!-- Message Notification -->
+                                            <div class="form-message"></div>
+                                        </div>
+                                        <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                             aria-labelledby="nav-profile-tab">
+                                            <div class="login-form">
+                                                <h:form enctype="multipart/form-data" class="login-form-wrapper" id="register-form">
+
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="first_name" class="form-label">First
+                                                                            Name *</label>
+                                                                        <h:inputText  class="form-control"
+                                                                                      id="first_name"  value="#{userbean.first_name}"></h:inputText>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="last_name" class="form-label">
+                                                                            Last Name *</label>
+                                                                        <h:inputText  class="form-control"
+                                                                                      id="last_name"  value="#{userbean.last_name}"></h:inputText>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="first_name" class="form-label">Username
+                                                                            *</label>
+                                                                        <h:inputText  class="form-control"
+                                                                                      id="uname"  value="#{userbean.username}"></h:inputText>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group mb-0">
+                                                                        <label for="password"
+                                                                               class="form-label mt-15">Password
+                                                                            *</label>
+                                                                        <h:inputText  class="form-control"
+                                                                                      id="pass"  value="#{userbean.password}"></h:inputText>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="gender" class="form-label">Gender
+                                                                            *</label>
+                                                                        <h:selectOneMenu class="form-control" value="#{userbean.gender}"><br/><br/>
+                                                                            <f:selectItem itemLabel="--select gender--" itemDisabled=""></f:selectItem>
+                                                                            <f:selectItem  itemLabel="Male" itemValue="Male"/>
+                                                                            <f:selectItem  itemLabel="Female" itemValue="Female"/>
+                                                                            <f:selectItem  itemLabel="Other" itemValue="Other"/>
+                                                                        </h:selectOneMenu>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="birthdate" class="form-label">Birth Date
+                                                                            *</label>
+                                                                        
+                                                                        <h:inputText  class="form-control"
+                                                                                      id="bod"  value="#{userbean.birth_date}"></h:inputText>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="age" class="form-label">
+                                                                            Age *</label>
+                                                                        <h:inputText  class="form-control"
+                                                                                      id="age"  value="#{userbean.age}"></h:inputText>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="height" class="form-label">Height
+                                                                            *</label>
+                                                                        <h:inputText  class="form-control"
+                                                                                      id="height"  value="#{userbean.height}"></h:inputText>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="weight" class="form-label">
+                                                                            Weight *</label>
+                                                                        <h:inputText  class="form-control"
+                                                                                      id="weight"  value="#{userbean.weight}"></h:inputText>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label class="form-label">Image
+                                                                            *</label>
+                                                                        <h:inputFile  class="form-control"
+                                                                                      id="image"  value="#{userbean.uploadedFile}"></h:inputFile>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="address" class="form-label">
+                                                                            Address*</label>
+                                                                        <h:inputText  class="form-control"
+                                                                                      id="address"  value="#{userbean.address}"></h:inputText>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="country" class="form-label">
+                                                                            Country*</label>
+                                                                        <h:selectOneMenu class="form-control"  value="#{trainerbean.country_id}" required="true" label="select country">
+                                                                            <f:selectItem itemLabel="--select country--" itemDisabled=""></f:selectItem>
+                                                                            <f:selectItems var="country" value="#{adminbean.getallcountry()}" itemLabel="#{country.countryName}" itemValue="#{country.countryId}"/>
+                                                                        </h:selectOneMenu>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="state" class="form-label">
+                                                                            State*</label>
+                                                                        <h:selectOneMenu class="form-control"  value="#{trainerbean.state_id}" required="true" label="select state">
+                                                                            <f:selectItem itemLabel="--select state--" itemDisabled=""></f:selectItem>
+                                                                            <f:selectItems var="state" value="#{adminbean.getallstates()}" itemLabel="#{state.stateName}" itemValue="#{state.stateId}"/>
+                                                                        </h:selectOneMenu>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="city" class="form-label">
+                                                                            City*</label>
+                                                                        <h:selectOneMenu class="form-control" value="#{trainerbean.city_id}" required="true" label="select city"><br/><br/>
+                                                                            <f:selectItem itemLabel="--select city--" itemDisabled=""></f:selectItem>
+                                                                            <f:selectItems var="city" value="#{adminbean.getallcity()}" itemLabel="#{city.cityName}" itemValue="#{city.cityId}"/>
+                                                                        </h:selectOneMenu>                                                                    
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="UserName" class="form-label">
+                                                                            Branch</label>
+                                                                        <h:selectOneMenu class="form-control"  value="#{trainerbean.branch_id}" required="true" label="select branch">
+                                                                            <f:selectItem itemLabel="--select branch--" itemDisabled=""></f:selectItem>
+                                                                            <f:selectItems  value="#{branchbean.getallbranch()}" var="branch" itemLabel="#{branch.branchName}" itemValue="#{branch.branchId}"/>
+                                                                        </h:selectOneMenu>
+                                                                    </div>
+                                                                </div>
+
+<!--                                                                <div class="col-md-12">
+                                                                    <div class="form-group mt-15">
+                                                                        <input type="checkbox" class="form-check-input"
+                                                                               id="exampleCheck1" />
+                                                                        <label class="form-check-label" for="exampleCheck1">
+                                                                            Remember me</label>
+                                                                    </div>
+                                                                </div>-->
+                                                                <div class="col-md-12">
+<!--                                                                    <div class="form-group mb-0">
+                                                                        <p>Your personal data will be used to support your
+                                                                            experience throughout this website, to manage
+                                                                            access to
+                                                                            your account, and for other purposes described
+                                                                            in our
+                                                                            privacy policy.</p>
+                                                                    </div>-->
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group mb-0 form-group-info">
+
+                                                                            <h:commandButton class="btn btn-theme btn-black" value="INSERT" action="#{userbean.insertuser()}"/>
+                                                                            <!--                                                                            <button class="btn btn-theme btn-black"
+                                                                                                                                                                type="button">Register</button>-->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </h:form>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--== End Contact Area ==-->
+            </main>
+            <!-- == Start Footer Area Wrapper == -->
+            <footer class="footer-area default-style bg-img" data-bg-img="#{facesContext.externalContext.requestContextPath}/user/assets/img/photos/bg-f1.png">
+                <div class="footer-main" style="padding: 65px 0 35px;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="widget-item mb-sm-30">
+                                    <div class="about-widget">
+                                        <a class="footer-logo" href="index.xhtml">
+                                            <img src="#{facesContext.externalContext.requestContextPath}/user/assets/img/logo-light.png" alt="Logo" />
+                                        </a>
+                                        <p>
+                                            Zymzoo winner dolor sit consectetur adipiscing elit, sed do eiusmod tempor
+                                            incididunt ut labore et dolore magna
+                                        </p>
+                                        <div class="opening-time">
+                                            <h4 class="title">
+                                                Opening time
+                                            </h4>
+                                            <ul>
+                                                <li>
+                                                    Monday - Friday: 7 am to 10 pm
+                                                </li>
+                                                <li>
+                                                    Saturday - Sunday: 9 am to 10 pm
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="widget-item pl-20 pl-sm-0 mb-sm-30 mb-xs-40">
+                                    <h4>
+                                        USEFULL LINK
+                                    </h4>
+                                    <nav class="widget-menu-wrap">
+                                        <ul class="nav-menu nav">
+                                            <li>
+                                                <a href="trainers.xhtml">
+                                                    Trainers
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="plans.xhtml">
+                                                    Payment
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="blogs.xhtml">
+                                                    Blogs
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="contact.xhtml">
+                                                    Contact
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-4 col-lg-3">
+                                <div class="widget-item mb-xs-50">
+                                    <h4>
+                                        CONTACT INFO
+                                    </h4>
+                                    <div class="widget-contact-info">
+                                        <div class="contact-info-item">
+                                            <div class="icon-box">
+                                                <img src="#{facesContext.externalContext.requestContextPath}/user/assets/img/icons/1.png" alt="Logo" />
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    Address
+                                                </h4>
+                                                <p>
+                                                    252B, Central Street Main road Belix Tower, New York, USA
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="contact-info-item">
+                                            <div class="icon-box">
+                                                <img src="#{facesContext.externalContext.requestContextPath}/user/assets/img/icons/2.png" alt="Logo" />
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    Phone
+                                                </h4>
+                                                <ul>
+                                                    <li>
+                                                        <a href="tel://09(123)456789">
+                                                            09 (123) 456 789
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="tel://09(987)654321">
+                                                            09 (987) 654 321
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="contact-info-item">
+                                            <div class="icon-box">
+                                                <img src="#{facesContext.externalContext.requestContextPath}/user/assets/img/icons/3.png" alt="Logo" />
+                                            </div>
+                                            <div class="content">
+                                                <h4 class="title">
+                                                    Web
+                                                </h4>
+                                                <ul>
+                                                    <li>
+                                                        <a href="mailto://info@example.com">
+                                                            info@example.com
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="index.html">
+                                                            www.example.com
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-md-6 col-lg-3">
+                                <div class="widget-item">
+                                    <h4>
+                                        NEWSLETTER
+                                    </h4>
+                                    <div class="widget-newsletter">
+                                        <p>
+                                            Subscribe our Newsletter and gates latest updates of offers, productsa and
+                                            promotions from every week we provide
+                                        </p>
+                                        <form class="newsletter-form input-btn-group">
+                                            <input class="form-control" type="text" placeholder="Email here" />
+                                            <button class="btn btn-theme" type="button">
+                                                <i class="fa fa-paper-plane-o">
+                                                </i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                    <div class="widget-social-icons">
+                                        <a href="#">
+                                            <i class="fa fa-facebook">
+                                            </i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-instagram">
+                                            </i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fa fa-twitter">
+                                            </i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="footer-bottom-content">
+                            <div class="row align-items-center">
+                                <div class="col-12">
+                                    <div class="widget-copyright text-center">
+                                        <p>
+                                            <i class="fa fa-copyright">
+                                            </i>
+                                            2021 Made with
+                                            <i class="fa fa-heart">
+                                            </i>
+                                            by
+                                            <a target="_blank" href="https://www.hasthemes.com">
+                                                HasThemes
+                                            </a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- == End Footer Area Wrapper == -->
+            <!-- == Scroll Top Button == -->
+            <div class="scroll-to-top">
+                <span class="fa fa-angle-double-up">
+                </span>
+            </div>
+            <!-- == Start Side Menu == -->
+            <aside class="off-canvas-wrapper">
+                <div class="off-canvas-inner">
+                    <div class="off-canvas-overlay d-none">
+                    </div>
+                    <!-- Start Off Canvas Content Wrapper -->
+                    <div class="off-canvas-content">
+                        <!-- Off Canvas Header -->
+                        <div class="off-canvas-header">
+                            <div class="close-action">
+                                <button class="btn-close">
+                                    <i class="pe-7s-close">
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="off-canvas-item">
+                            <!-- Start Mobile Menu Wrapper -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                            <div class="res-mobile-menu">
+                                <!-- Note Content Auto Generate By Jquery From Main Menu -->
+                            </div>
+                            <!-- End Mobile Menu Wrapper -->
+                        </div>
+                        <!-- Off Canvas Footer -->
+                        <div class="off-canvas-footer">
+                        </div>
+                    </div>
+                    <!-- End Off Canvas Content Wrapper -->
+                </div>
+            </aside>
+            <!-- == End Side Menu == -->
+        </div>
+        <!-- =======================Javascript============================ -->
+        <!-- === Modernizr Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/modernizr.js">
+        </script>
+        <!-- === jQuery Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/jquery-main.js">
+        </script>
+        <!-- === jQuery Migration Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/jquery-migrate.js">
+        </script>
+        <!-- === Popper Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/popper.min.js">
+        </script>
+        <!-- === Bootstrap Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/bootstrap.min.js">
+        </script>
+        <!-- === jquery Appear Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/jquery.appear.js">
+        </script>
+        <!-- === jquery Swiper Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/swiper.min.js">
+        </script>
+        <!-- === jquery Fancybox Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/fancybox.min.js">
+        </script>
+        <!-- === jquery Aos Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/aos.min.js">
+        </script>
+        <!-- === jquery Slicknav Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/jquery.slicknav.js">
+        </script>
+        <!-- === jquery Countdown Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/jquery.countdown.min.js">
+        </script>
+        <!-- === jquery Tippy Js === -->
+        <!-- <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/tippy.all.min.js"></script> -->
+        <!-- === Isotope Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/isotope.pkgd.min.js">
+        </script>
+        <!-- === jquery Vivus Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/vivus.js">
+        </script>
+        <!-- === Parallax Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/parallax.min.js">
+        </script>
+        <!-- === Slick  Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/slick.min.js">
+        </script>
+        <!-- === jquery Wow Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/wow.min.js">
+        </script>
+        <!-- === jquery Zoom Min Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/jquery-zoom.min.js">
+        </script>
+        <!-- === Custom Js === -->
+        <script src="#{facesContext.externalContext.requestContextPath}/user/assets/js/custom.js">
+        </script>
+    </body>
+
+</html>

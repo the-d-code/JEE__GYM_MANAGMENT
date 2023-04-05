@@ -1,0 +1,214 @@
+/*
+-----------------------------------------------------------------------
+  Featured CSS
+-----------------------------------------------------------------------
+*/
+.featured-area {
+  &.featured-default-area {}
+}
+
+.featured-item {
+  position: relative;
+  .featured-thumb {
+    overflow: hidden;
+    img {
+      width: 100%;
+      @include transition(all .9s ease-in-out);
+    }
+  }
+  .featured-info {
+    bottom: 56px;
+    left: 51px;
+    max-width: 160px;
+    position: absolute;
+    @media #{$xl-device} {
+      bottom: 40px;
+    }
+    @media #{$lg-device} {
+      bottom: 30px;
+      left: 30px;
+      max-width: none;
+    }
+    @media #{$md-device} {
+      bottom: 45px;
+    }
+    h4 {
+      border-bottom: 2px solid $white;
+      color: $white;
+      font-size: 32px;
+      padding-bottom: 10px;
+      @include transition(all .3s ease-in-out);
+      @media #{$lg-device} {
+        font-size: 28px;
+        br {
+          display: none;
+        }
+      }
+    }
+    h5 {
+      color: $white;
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: .25px;
+      margin-bottom: 0;
+      @media #{$lg-device} {
+        font-size: 18px;
+      }
+      span {
+        font-size: 18px;
+        position: relative;
+        top: 1px;
+      }
+    }
+  }
+  &:hover {
+    .featured-thumb {
+      img {
+        @include scale(1.15);
+      }
+    }
+    .featured-info {
+      h4 {
+        border-color: $theme-color;
+      }
+    }
+  }
+}
+
+.featured-columns-wrap {
+  display: flex;
+  height: 100%;
+  position: relative;
+  justify-content: space-between;
+  @media #{$md-device} {
+    display: block;
+    height: auto;
+  }
+  .featured-items-style2 {
+    max-width: 847px;
+    padding: 64px 0 16px 70px;
+    @media #{$lg-device} {
+      max-width: 910px;
+      padding: 64px 0 16px 25px;
+    }
+    @media #{$md-device} {
+      margin-bottom: 50px;
+      max-width: none;
+    }
+    @media #{$sm-device} {
+      padding: 64px 0 30px 25px;
+    }
+    @media #{$xs-device} {
+      padding: 64px 15px 30px 15px;
+    }
+  }
+}
+
+.featured-items-style2 {
+  .featured-item {
+    margin-bottom: 56px;
+    max-width: 315px;
+    position: relative;
+    padding-left: 75px;
+    @media #{$sm-device} {
+      margin-bottom: 35px;
+    }
+    .featured-icon {
+      left: 0;
+      position: absolute;
+      top: 6px;
+    }
+    .featured-info {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      max-width: none;
+      left: 0;
+      h4 {
+        border: none;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 18px;
+        font-size: 24px;
+        font-weight: 600;
+        @media #{$xs-device} {
+          font-size: 18px;
+        }
+      }
+      p {
+        color: #e0e0e0;
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.featured-discount-item {
+  height: 100%;
+  max-width: 323px;
+  position: relative;
+  width: 100%;
+  @media #{$lg-device} {
+    max-width: 260px;
+  }
+  @media #{$md-device} {
+    max-width: 380px;
+  }
+  &:before {
+    background-color: #e1e1e1;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 5px;
+    z-index: 1;
+    @media #{$md-device} {
+      display: none;
+    }
+  }
+  .thumb {
+    background-size: cover;
+    left: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    @media #{$lg-device} {
+      overflow: hidden;
+    }
+    @media #{$md-device} {
+      min-height: 575px;
+      position: relative;
+    }
+    @media #{$xs-device} {
+      min-height: 320px;
+    }
+    &:after {
+      bottom: -9px;
+      content: url('../img/icons/featured1.png');
+      left: 0;
+      position: absolute;
+      width: 100%;
+    }
+  }
+  .content {
+    position: absolute;
+    bottom: 11px;
+    right: 16px;
+    h2 {
+      color: $white;
+      font-size: 60px;
+      letter-spacing: .10px;
+      margin-bottom: 1px;
+    }
+    h3 {
+      color: $white;
+      font-size: 28px;
+      letter-spacing: .30px;
+      margin-bottom: 10px;
+    }
+  }
+}

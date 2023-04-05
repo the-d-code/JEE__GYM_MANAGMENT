@@ -1,0 +1,199 @@
+/*
+-----------------------------------------------------------------------
+	About CSS
+-----------------------------------------------------------------------
+*/
+.about-area {
+  &.about-default-area {
+  	padding: 125px 0 0;
+  	@media #{$lg-device} {
+  		padding: 90px 0;
+  	}
+  	@media #{$md-device} {
+  		padding: 90px 0 0;
+  	}
+  	@media #{$xs-device} {
+  		padding: 75px 0 0;
+  	}
+    .section-title {
+      .title {
+        margin-bottom: 24px;
+      }
+    }
+		.thumb {
+			position: relative;
+			@media #{$md-device} {
+				display: inline-block;
+			}
+			&:before {
+				content: url('../img/icons/5.png');
+				position: absolute;
+				top: 39%;
+				left: 15%;
+			}
+			&:after {
+				content: url('../img/icons/5.png');
+				position: absolute;
+				bottom: 7%;
+		    right: 16%;
+		    @media #{$md-device} {
+		    	right: 5%;
+		    }
+			}
+		}
+  }
+  &.about-inner-area {
+  	padding: 125px 0 0;
+  	@media #{$lg-device} {
+  		padding: 90px 0;
+  	}
+  	@media #{$md-device} {
+  		padding: 90px 0 0;
+  	}
+  	.section-title {
+  		margin-bottom: 63px;
+  		@media #{$lg-device} {
+  			margin-bottom: 55px;
+  		}
+  		@media #{$md-device} {
+  			margin-bottom: 45px;
+  		}
+  		.title {
+  			@media #{$sm-device} {
+  				br {
+  					display: none;
+  				}
+  			}
+  		}
+  	}
+  	.thumb {
+  		position: relative;
+	    left: -26px;
+	    @media #{$md-device} {
+	    	display: inline-block;
+	    }
+			&:before {
+				content: url('../img/icons/5.png');
+				position: absolute;
+				top: 49.5%;
+				left: 14%;
+			}
+			&:after {
+				content: url('../img/icons/5.png');
+				position: absolute;
+				bottom: 3.3%;
+		    right: 17%;
+			}
+  	}
+  	.about-content {
+  		top: 100px;
+  		margin-left: -61px;
+  		padding-right: 49px;
+  		@media #{$lg-device} {
+  			margin-left: -30px;
+  			padding-right: 0;
+  		}
+  		@media #{$md-device} {
+  			margin-left: 0;
+  			top: 0;
+  		}
+  	}
+  }
+}
+
+
+.about-content {
+  margin-left: -27px;
+  top: 60px;
+	position: relative;
+	@media #{$md-device} {
+		margin-bottom: 70px;
+		margin-left: 0;
+		top: 0;
+	}
+	.desc {
+		p {
+			color: $theme-color4;
+			margin-bottom: 34px;
+			@media #{$lg-device} {
+				margin-bottom: 25px;
+			}
+		}
+	}
+	.inner-content {
+		.about-list {
+			ul {
+				display: flex;
+		    flex-wrap: wrap;
+        margin-bottom: 34px;
+        @media #{$lg-device} {
+        	margin-bottom: 25px;
+        }
+				li {
+			    display: inline-block;
+					color: $theme-color4;
+					font-weight: $font-weight-medium;
+					font-size: 18px;
+					margin-bottom: 17px;
+					line-height: 1.555;
+					width: 50%;
+					@media #{$lg-device} {
+						font-size: 15px;
+						margin-bottom: 12px;
+					}
+					@media #{$xs-device} {
+						width: 100%;
+					}
+					&:before {
+						border: 1px solid $theme-color;
+				    border-radius: 50%;
+						display: inline-block;
+						content: "";
+						margin-right: 11px;
+						position: relative;
+						width: 14px;
+						height: 14px;
+					}
+				}
+			}
+		}
+		.inline-style {
+			align-items: center;
+			display: flex;
+			@media #{$xs-device} {
+				display: block;
+			}
+			.btn-theme {
+				border-radius: 27px;
+				font-weight: 600;
+				font-size: 14px;
+				width: 149px;
+				height: 55px;
+				line-height: 55px;
+				letter-spacing: .10px;
+				padding: 0;
+				margin-right: 35px;
+				@media #{$xs-device} {
+					margin-bottom: 30px;
+				}
+				&:hover {
+					background-color: $theme-color4;
+				}
+			}
+			.btn-play-box {
+				.btn-play {
+					color: $theme-color4;
+					font-weight: 700;
+					font-size: 16px;
+					letter-spacing: .25px;
+					&:hover {
+						color: $theme-color;
+					}
+					img {
+						margin-right: 12px;
+					}
+				}
+			}
+		}
+	}
+}

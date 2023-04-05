@@ -1,0 +1,109 @@
+/*
+-----------------------------------------------------------------------
+  Service CSS
+-----------------------------------------------------------------------
+*/
+.service-area {
+  &.service-default-area {
+    padding: 130px 0 70px;
+    @media #{$lg-device} {
+      padding: 90px 0 50px;
+    }
+    @media #{$md-device} {
+      padding: 90px 0 30px;
+    }
+  }
+  &.class-service-area {
+    padding: 142px 0 71px;
+    @media #{$lg-device} {
+      padding: 120px 0 30px;
+    }
+  }
+}
+
+.service-item {
+  @media #{$xs-device} {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
+  }
+  .inner-content {
+    margin-left: 70px;
+    margin-bottom: 60px;
+    position: relative;
+    @media #{$xs-device} {
+      margin-bottom: 40px;
+    }
+    .thumb {
+      position: relative;
+      &:before {
+        background-color: #f2f2f2;
+        bottom: 0;
+        content: "";
+        height: calc(100% - 63px);
+        position: absolute;
+        right: 0;
+        width: 100%;
+        z-index: -1;
+      }
+      span {
+        display: block;
+        left: -70px;
+        overflow: hidden;
+        position: relative;
+      }
+      img {
+        @include transition(.9s);
+      }
+    }
+    .content {
+      background-color: #f2f2f2;
+      padding: 22px 0 20px 7px;
+      .title {
+        bottom: 62px;
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 0;
+        letter-spacing: -.2px;
+        writing-mode: vertical-lr;
+        position: absolute;
+        right: -8px;
+        text-transform: uppercase;
+        @include transform(rotate(180deg));
+        a {
+          color: $theme-color4;
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+      .class-time {
+        color: #787878;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 0;
+        margin-left: 15px;
+        letter-spacing: .3px;
+      }
+    }
+  }
+  &:hover {
+    .inner-content {
+      .thumb {
+        span {
+          img {
+            @include scale(1.25);
+          }
+        }
+      }
+      .content {
+        .title {
+          a {
+            color: $theme-color;
+          }
+        }
+      }
+    }
+  }
+}

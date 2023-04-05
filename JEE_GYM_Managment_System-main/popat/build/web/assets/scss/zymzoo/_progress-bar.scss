@@ -1,0 +1,36 @@
+/*
+-----------------------------------------------------------------------
+  Progress Bar CSS
+-----------------------------------------------------------------------
+*/
+
+.progress-content {
+  margin-bottom: 64px;
+}
+
+.progress-item {
+  max-width: 460px;
+  margin-bottom: 23px;
+  .progress-info {
+    margin-bottom: 8px;
+
+    .title {
+      font-size: 14px;
+      line-height: 2;
+      letter-spacing: 0.25px;
+    }
+    .percent {
+      margin-right: 27px;
+    }
+  }
+
+  .progress-line {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    height: 10px;
+    .progress-bar-line {
+      border-radius: 5px;
+      max-width: 410px;
+    }
+  }
+}

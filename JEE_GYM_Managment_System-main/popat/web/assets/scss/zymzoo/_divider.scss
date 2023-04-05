@@ -1,0 +1,147 @@
+/*
+-----------------------------------------------------------------------
+    Divider CSS
+-----------------------------------------------------------------------
+*/
+.divider-area {
+  &.classes-divider-area {
+  	padding: 150px 0 0;
+  	@media #{$lg-device} {
+  		padding: 90px 0 0;
+  	}
+  	.thumb {
+  		display: inline-block;
+  		margin-left: 49px;
+  		position: relative;
+  		@media #{$lg-device} {
+  			margin-left: 80px;
+  			margin-right: 50px;
+  			margin-top: 30px;
+  		}
+  		@media #{$md-device} {
+  			margin-left: 35px;
+  			margin-right: 40px;
+  			margin-top: 30px;
+  		}
+  		@media #{$sm-device} {
+  			margin-left: 15px;
+  			margin-top: 70px;
+  		}
+  		&:before {
+  			border: 1px solid $theme-color;
+  			border-radius: 50%;
+  			bottom: 41px;
+  			content: "";
+  			height: 53px;
+  			left: -57px;
+  			position: absolute;
+  			width: 53px;
+  			@media #{$lg-device} {
+  				bottom: 20px;
+  				left: -65px;
+  			}
+  			@media #{$md-device} {
+  				display: none;
+  			}
+  		}
+  		&:after {
+  			background-color: $theme-color;
+  			border-radius: 50%;
+  			bottom: 1px;
+  			content: "";
+  			height: 75px;
+  			position: absolute;
+  			right: -45px;
+  			width: 75px;
+  			@media #{$lg-device} {
+  				bottom: -33px;
+  				right: -55px;
+  			}
+  			@media #{$md-device} {
+  				display: none;
+  			}
+  		}
+  		.shape-border {
+				border: 1px solid rgba($black, .33);
+				border-radius: 50%;
+				content: "";
+				height: calc(100% + 38px);
+				left: -19px;
+				position: absolute;
+				top: -19px;
+				width: calc(100% + 38px);
+  		}
+  	}
+  }
+}
+
+.divider-content {
+	.subtitle {
+		color: $theme-color;
+		font-size: 18px;
+		letter-spacing: 1px;
+		margin-bottom: 9px;
+	}
+	.title {
+		color: $theme-color4;
+		font-size: 42px;
+		line-height: 1.333;
+		margin-bottom: 24px;
+		span {
+			color: $theme-color;
+		}
+	}
+	p {
+		color: $theme-color4;
+		margin-bottom: 17px;
+	}
+	.btn-play-box {
+		margin-top: 36px;
+		.btn-play {
+			color: $theme-color4;
+			font-weight: 700;
+			font-size: 16px;
+			letter-spacing: .25px;
+			img {
+		    margin-right: 11px;
+			}
+			&:hover {
+				color: $theme-color;
+			}
+		}
+	}
+}
+
+.shape-group {
+	pointer-events: none;
+	.shape-img1 {
+		position: absolute;
+    bottom: -135px;
+    right: -254px;
+	}
+	.shape-img2 {
+		position: absolute;
+    bottom: 27px;
+    left: -280px;
+	}
+	.shape-img3 {
+		position: absolute;
+    bottom: 185px;
+    right: -258px;
+	}
+	.shape-img4 {
+		position: absolute;
+    bottom: 250px;
+    left: -285px;
+	}
+	.shape-img5 {
+		position: absolute;
+    top: 133px;
+    left: -275px;
+	}
+	.shape-img6 {
+		position: absolute;
+    top: -137px;
+    right: -278px;
+	}
+}

@@ -1,0 +1,792 @@
+/*
+-----------------------------------------------------------------------
+    Blog CSS
+-----------------------------------------------------------------------
+*/
+
+.blog-area {
+  &.blog-default-area {
+    padding: 127px 0 131px;
+    @media #{$lg-device} {
+      padding: 90px 0;
+    }
+  }
+}
+
+.post-item {
+  .thumb {
+    overflow: hidden;
+    a {
+      img {
+        width: 100%;
+        @include transition(all .9s ease-in-out);
+      }
+    }
+  }
+  .content {
+    background-color: #f2f2f2;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    padding: 24px 26px 20px;
+    @media #{$xxs-device} {
+      padding: 24px 15px 20px;
+    }
+    .meta {
+      font-size: 14px;
+      font-weight: $font-weight-medium;
+      margin-bottom: 8px;
+      a {
+        color: #787878;
+        &:hover {
+          color: $theme-color;
+        }
+        &.category {
+          color: $theme-color;
+        }
+      }
+      .category {
+        margin-right: 20px;
+        i {
+          margin-right: 4px;
+        }
+      }
+      .post-date {
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+    .title {
+      font-size: 24px;
+      line-height: 1.25;
+      margin-bottom: 15px;
+      @media #{$xxs-device} {
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
+      a {
+        color: $body-color;
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+    p {
+      color: #676767;
+      font-size: 16px;
+      line-height: 1.5;
+      @media #{$xxs-device} {
+        font-size: 14px;
+        line-height: 1.3;
+      }
+    }
+  }
+  &:hover {
+    .thumb {
+      a {
+        img {
+          @include scale(1.15);
+        }
+      }
+    }
+  }
+}
+
+.blog-grid-area {
+  padding: 130px 0 89px;
+  @media #{$lg-device} {
+    padding: 90px 0;
+  }
+  .post-item {
+    margin-bottom: 30px;
+  }
+}
+
+.blog-details-area {
+  padding: 130px 0;
+  @media #{$lg-device} {
+    padding: 90px 0;
+  }
+}
+.post-details-content {
+  .post-details-body {
+    .content {
+      .meta {
+        margin-top: 34px;
+        margin-bottom: 11px;
+        a {
+          color: #787878;
+          font-weight: 500;
+          font-size: 18px;
+          i {
+            margin-right: 10px;
+          }
+          &:hover {
+            color: $theme-color;
+          }
+        }
+        .category {
+          margin-right: 30px;
+        }
+        .post-date {
+          letter-spacing: .25px;
+        }
+      }
+      .title {
+        font-size: 42px;
+        line-height: 1.3333;
+        margin-bottom: 24px;
+        @media #{$lg-device} {
+          font-size: 30px;
+        }
+        @media #{$xxs-device} {
+          font-size: 18px;
+        }
+        a {
+          color: $theme-color4;
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+      p {
+        color: $theme-color4;
+        font-size: 16px;
+        line-height: 1.75;
+        margin-bottom: 16px;
+      }
+      .thumb-inner {
+        margin-bottom: 36px;
+        margin-top: 23px;
+      }
+      .blockquote-area {
+        .blockquote-style {
+          border-left: 8px solid $theme-color;
+          position: relative;
+          padding: 58px 36px 43px;
+          margin-top: 33px;
+          p {
+            color: $white;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.7777;
+          }
+          .icon {
+            position: absolute;
+            bottom: 20px;
+            right: 36px;
+          }
+        }
+      }
+      .widget-social-tags {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 37px;
+        margin-bottom: 12px;
+        @media #{$xxs-device} {
+          display: block;
+        }
+        .widget-tags {
+          display: flex;
+          align-items: baseline;
+          span {
+            font-family: $font-current-theme2;
+            font-weight: 600;
+            font-size: 18px;
+            margin-right: 10px;
+          }
+          ul {
+            display: flex;
+            li {
+              font-size: 16px;
+              a {
+                color: $theme-color4;
+                border: 1px solid #e0e0e0;
+                border-radius: 14.5px;
+                display: inline-block;
+                margin-right: 8px;
+                padding: 0 12px;
+                &:hover {
+                  border-color: $theme-color;
+                  background-color: $theme-color;
+                  color: $white;
+                }
+              }
+            }
+          }
+        }
+        .widget-social-icons {
+          display: flex;
+          align-items: baseline;
+          @media #{$xxs-device} {
+            margin-bottom: 50px;
+          }
+          span {
+            font-family: $font-current-theme2;
+            font-weight: 600;
+            font-size: 18px;
+            margin-right: 10px;
+          }
+          a {
+            background-color: #e3e3e3;
+            border-radius: 10px;
+            color: $theme-color4;
+            display: inline-block;
+            font-size: 14px;
+            height: 27px;
+            line-height: 29px;
+            margin-right: 10px;
+            text-align: center;
+            width: 27px;
+            &:hover {
+              border-color: $theme-color;
+              background-color: $theme-color;
+              color: $white;
+            }
+          }
+        }
+      }
+      .page-next-prev {
+        border: 2px solid #e9e9e9;
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 23px;
+        @media #{$lg-device} {
+          padding: 30px 18px;
+        }
+        @media #{$xxs-device} {
+          display: block;
+        }
+        .nav-item {
+          position: relative;
+          @media #{$xs-device} {
+            max-width: 222px;
+          }
+          @media #{$xxs-device} {
+            max-width: none;
+          }
+          i {
+            border: 1px solid #adadad;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 19.55px;
+            width: 36px;
+            height: 35px;
+            line-height: 33px;
+            text-align: center;
+            @include transition(all .3s ease-in-out);
+            @media #{$sm-device} {
+              line-height: 23px;
+              width: 26px;
+              height: 26px;
+            }
+          }
+          a {
+            color: $heading-color;
+            display: inline-block;
+            font-family: $font-current-theme2;
+            font-weight: $font-weight-semi-bold;
+            font-size: 18px;
+            line-height: 1.34;
+            @media #{$sm-device} {
+              font-size: 16px;
+            }
+            br {
+              @media #{$xs-device} {
+                display: none;
+              }
+            }
+          }
+          &.prev {
+            padding-left: 54px;
+            @media #{$sm-device} {
+              padding-left: 38px;
+              padding-right: 4px;
+            }
+            @media #{$xs-device} {
+              padding-left: 0;
+              padding-right: 5px;
+              text-align: left;
+            }
+            @media #{$xxs-device} {
+              margin-bottom: 40px;
+              padding-left: 35px;
+            }
+            i {
+              left: 0;
+              position: absolute;
+              top: 8px;
+              @media #{$xs-device} {
+                display: block;
+                left: 0;
+                position: relative;
+                top: 0;
+                margin: 0  auto 10px 0;
+              }
+              @media #{$xxs-device} {
+                position: absolute;
+                top: 10px;
+              }
+            }
+          }
+          &.next {
+            padding-right: 55px;
+            @media #{$sm-device} {
+              padding-right: 38px;
+              padding-left: 4px;
+            }
+            @media #{$xs-device} {
+              display: flex;
+              flex-direction: column-reverse;
+              padding-right: 0;
+              padding-left: 5px;
+              text-align: right;
+            }
+            @media #{$xxs-device} {
+              padding-right: 35px;
+            }
+
+            i {
+              right: 0;
+              position: absolute;
+              top: 8px;
+              @media #{$xs-device} {
+                right: 0;
+                position: relative;
+                top: 0;
+                margin: 0 0 10px auto;
+              }
+              @media #{$xxs-device} {
+                position: absolute;
+                top: 10px;
+              }
+            }
+            a {
+              text-align: right;
+            }
+          }
+          &:hover {
+            i {
+              background-color: $theme-color;
+              border-color: $theme-color;
+            }
+          }
+        }
+      }
+      .comment-area {
+        .container {
+          padding-top: 61px;
+        }
+        .title {
+          font-size: 32px;
+          margin-bottom: 37px;
+        }
+        .comment-view-area {
+          padding-bottom: 24px;
+        }
+        .comment-form-area {
+          .title {
+            margin-bottom: 42px;
+          }
+        }
+        .comment-content {
+          margin-bottom: 29px;
+          .single-comment {
+            .author-info {
+              display: flex;
+              position: relative;
+              .thumb {
+                position: absolute;
+                top: 7px;
+                img {}
+              }
+              .author-details {
+                padding-left: 101px;
+                ul {
+                  margin-bottom: 8px;
+                  .name {
+                    font-family: $font-current-theme2;
+                    font-weight: 600;
+                    font-size: 18px;
+                    margin-bottom: 1px;
+                  }
+                  .meta-date {
+                    color: #787878;
+                    font-weight: 500;
+                    font-size: 14px;
+                    letter-spacing: 0.25px;
+                  }
+                }
+                p {
+                  font-size: 14px;
+                  line-height: 1.7142;
+                  margin-bottom: 7px;
+                }
+                .btn-reply {
+                  color: #787878;
+                  font-size: 14px;
+                  letter-spacing: 0.10px;
+                  &:hover {
+                    color: $theme-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar-area {
+  .widget-item {
+    margin-bottom: 40px;
+    .widget-title {
+      background-color: $theme-color;
+      display: block;
+      padding: 25px 35px 17px;
+      @media #{$lg-device} {
+        padding: 25px 35px 17px 20px;
+      }
+      .title {
+        font-weight: 800;
+        font-size: 24.01px;
+      }
+    }
+  }
+  .widget-body {
+    background-color: #f2f2f2;
+    padding: 29px 34px 41px 34px;
+    @media #{$xxs-device} {
+      padding: 29px 15px 41px;
+    }
+    &.widget-categorie-body {
+      padding: 0;
+    }
+    &.widget-post-body {
+      border-bottom: 3px solid #e8e8e8;
+      padding: 30px 35px 29px 35px;
+      @media #{$xxs-device} {
+        padding: 30px 15px 29px;
+      }
+      &:last-child {
+        border: none;
+      }
+    }
+    &.widget-tags-body {
+      padding: 29px 34px 20px 34px;
+      @media #{$xxs-device} {
+        padding: 29px 15px 20px;
+      }
+    }
+  }
+  .widget-search-box {
+    position: relative;
+    form {
+      .form-input-item {
+        input {
+          border: 2px solid #e4e4e4;
+          background-color: #f2f2f2;
+          color: #aeaeae;
+          font-weight: 400;
+          font-size: 16px;
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          padding: 0 55px 0 19px;
+          @include placeholder {
+            color: #aeaeae;
+          }
+        }
+        .btn-src {
+          border: none;
+          background-color: $theme-color4;
+          color: #c5c1c1;
+          font-size: 20px;
+          width: 50px;
+          height: 45px;
+          line-height: 45px;
+          right: 0;
+          padding: 0;
+          position: absolute;
+          top: 0;
+          @include transition(all .3s ease-in-out);
+          &:hover {
+            background-color: $theme-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .widget-categories {
+    ul {
+      li {
+        border-bottom: 3px solid #e8e8e8;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 15px 35px 13px 34px;
+        @media #{$xxs-device} {
+          padding: 15px 15px 13px;
+        }
+        &:hover {
+          a {
+            color: $theme-color;
+            span {
+              color: $theme-color;
+            }
+          }
+        }
+        &:last-child {
+          border: none;
+        }
+        &.active {
+          padding-bottom: 16px;
+          font-weight: 500;
+          a {
+            color: $theme-color;
+          }
+          span {
+            color: $theme-color;
+          }
+        }
+        a {
+          color: $theme-color4;
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            color: #909090;
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+  .widget-categories2 {
+    ul {
+      li {
+        border-bottom: 2px solid #e8e8e8;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 15px 35px 13px 34px;
+        @media #{$lg-device} {
+          padding: 15px 30px 13px 20px;
+        }
+        &:hover {
+          a {
+            color: $theme-color;
+            span {
+              color: $theme-color;
+            }
+          }
+        }
+        &:last-child {
+          border: none;
+        }
+        &.active {
+          padding-bottom: 16px;
+          font-weight: 500;
+          a {
+            color: $theme-color;
+          }
+          span {
+            color: #d4d4d4;
+          }
+        }
+        &.yoga {
+          padding-bottom: 16px;
+        }
+        a {
+          color: $theme-color4;
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          align-items: center;
+        }
+        span {
+          color: #909090;
+          font-size: 14px;
+          font-weight: 400;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .widget-blog-post {
+    ul {
+      margin: 0;
+      li {
+        .content {
+          .meta {
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: .10px;
+            margin-top: 16px;
+            margin-bottom: 9px;
+            a {
+              color: #787878;
+              @media #{$xxs-device} {
+                font-size: 13px;
+              }
+              &:hover {
+                color: $theme-color;
+              }
+              i {
+                margin-right: 5px;
+              }
+            }
+            .category {
+              margin-right: 38px;
+            }
+          }
+          .title {
+            font-size: 18px;
+            line-height: 1.3333;
+            margin: 0;
+            a {
+              color: $theme-color4;
+              &:hover {
+                color: $theme-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .widget-tags {
+    ul {
+      margin: 0;
+      li {
+        display: inline-block;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 10px;
+        a {
+          border: 1px solid #e0e0e0;
+          border-radius: 14.5px;
+          color: $theme-color4;
+          display: inline-block;
+          margin-right: 3px;
+          padding: 0 12px;
+          &:hover {
+            border-color: $theme-color;
+            background-color: $theme-color;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  .widget-price-filter-body {
+    .widget-price-filter {
+      .slider-range {
+        background-color: #dfdfdf;
+        height: 8px;
+        margin-bottom: 18px;
+        .noUi-handle {
+          background-color: $theme-color4;
+          top: -6px;
+          &.noUi-active {
+            top: -14px;
+          }
+        }
+        .noUi-connect {
+          background-color: $theme-color4;
+        }
+      }
+      .slider-labels {
+        display: flex;
+        .range-separator {
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+  .widget-content-ads {
+    .ads-thumb {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .widget-hour {
+    ul {
+      margin: 0;
+      li {
+        font-size: 16px;
+        line-height: 1.75;
+        border-bottom: 2px solid #e8e8e8;
+        padding: 15px 20px 13px 34px;
+        @media #{$lg-device} {
+          padding: 15px 20px 13px 20px;
+        }
+        &:last-child {
+          border: none;
+          padding-bottom: 15px;
+          i {
+            margin-left: 6px;
+            margin-right: 2px;
+          }
+        }
+        i {
+          font-size: 14px;
+          margin-right: 8px;
+          margin-left: 10px;
+        }
+        span {
+          font-size: 14px;
+          position: relative;
+          top: -1px;
+        }
+      }
+    }
+  }
+  .widget-download {
+    ul {
+      li {
+        font-size: 16px;
+        line-height: 1.75;
+        border-bottom: 2px solid #e8e8e8;
+        padding: 15px 35px 13px 34px;
+        @media #{$lg-device} {
+          padding: 15px 35px 13px 20px;
+        }
+        &:last-child {
+          border: none;
+        }
+        a {
+          color: $theme-color4;
+          &:hover {
+            color: $theme-color;
+          }
+        }
+        i {
+          margin-right: 13px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &.inner-right-padding {
+    padding-left: 21px;
+    @media #{$lg-device} {
+      padding-left: 0;
+    }
+  }
+  &.inner-left-padding {
+    padding-right: 21px;
+    @media #{$lg-device} {
+      padding-right: 0;
+    }
+  } 
+}
+
+
+
+.post-details-content {}
+
+.comments-area {}

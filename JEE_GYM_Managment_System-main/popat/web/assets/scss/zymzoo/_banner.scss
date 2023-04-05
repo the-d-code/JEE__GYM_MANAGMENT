@@ -1,0 +1,208 @@
+/*
+-----------------------------------------------------------------------
+    Home Slider CSS
+-----------------------------------------------------------------------
+*/
+
+.home-slider-area {
+  &.slider-default {
+    position: relative;
+    .home-slider-content {
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            &-active {
+              .slider-content-area {
+                .content {
+                  .inner-content {
+                    -webkit-animation-delay: .3s;
+                    animation-delay: .3s;
+                    -webkit-animation-name: fadeInUp;
+                    animation-name: fadeInUp;
+                  }
+                }
+                .slider-thumb {
+                  img {
+                    -webkit-animation-delay: .5s;
+                    animation-delay: .5s;
+                    -webkit-animation-name: fadeInRight;
+                    animation-name: fadeInRight;
+                  }
+                }
+              }
+            }
+          }
+        }        
+        .swiper-pagination {
+          bottom: 23px;
+          .swiper-pagination-bullet {
+            background-color: rgba($white, .46);
+            height: 12px;
+            margin: 0 8px;
+            opacity: 1;
+            width: 12px;
+            &.swiper-pagination-bullet-active {
+              background-color: $white;
+            }
+          }
+        }
+      }
+    }
+    .bg-overlay {
+      position: relative;
+      &:before {
+        background-color: rgba(0, 0, 0, .3);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+    .home-slider-item {
+      overflow: hidden;
+      position: relative;
+      .bg-thumb {
+        position: relative;
+        &:before {
+          background-color: rgba(149, 133, 30, .15);
+          bottom: 0;
+          content: "";
+          height: 100%;
+          left: calc(50% + 435px);
+          position: absolute;
+          width: 100%;
+          @include transform(skew(-33deg, 0deg));
+        }
+      }
+      .bg-img {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+      }
+    }
+    .slider-content-area {
+      align-items: center;
+      display: flex;
+      height: 950px;
+      position: relative;
+      @media #{$lg-device} {
+        height: 680px;
+      }
+      @media #{$md-device} {
+        height: 620px;
+      }
+      @media #{$sm-device} {
+        height: 520px;
+      }
+      @media #{$xs-device} {
+        height: 500px;
+      }
+      .content {
+        margin-top: 117px;
+        @media #{$md-device} {
+          margin-top: 60px;
+          text-align: center;
+        }
+        @media #{$xs-device} {
+          margin-top: 40px;
+        }
+        .inner-content {
+          position: relative;
+          -webkit-animation-duration: 1.25s;
+          animation-duration: 1.25s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          @include transition(2s);
+          .icon {
+            margin-bottom: 19px;
+          }
+          h2 {
+            color: $theme-color;
+            font-size: 120px;
+            font-weight: 600;
+            letter-spacing: .1px;
+            line-height: 1.04;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            @media #{$lg-device} {
+              font-size: 62px;
+            }
+            @media #{$md-device} {
+              font-size: 48px;
+            }
+            @media #{$xs-device} {
+              font-size: 36px;
+              margin-bottom: 20px;
+            }
+            span {
+              color: #e0e0e0;
+              font-weight: 300;
+            }
+          }
+          p {
+            color: #d4d4d4;
+            font-size: 16px;
+            line-height: 1.875;
+            margin-bottom: 43px;
+            max-width: 450px;
+            @media #{$md-device} {
+              margin-bottom: 25px;
+              max-width: none;
+            }
+            @media #{$xs-device} {
+              font-size: 14px;
+            }
+          }
+          .btn-theme {
+            background-color: transparent;
+            border: 1px solid #e1e1e1;
+            border-radius: 27.5px;
+            color: #e0e0e0;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: .1px;
+            padding: 14px 23.9px;
+            text-transform: uppercase;
+            @media #{$md-device} {
+              font-size: 13px;
+              padding: 9px 21px;
+            }
+            &:hover {
+              background-color: $theme-color;
+              border-color: $theme-color;
+              color: $white;
+            }
+          }
+        }
+      }
+      .slider-thumb {
+        margin-top: 167px;
+        padding-left: 33px;
+        position: relative;
+        @media (max-width:1599px) {
+          padding-left: 0;
+        }
+        @media #{$lg-device} {
+          margin-top: 152px;
+        }
+        @media #{$md-device} {
+          display: none;
+        }
+        img {
+          max-width: none;
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          -webkit-animation-name: fadeOut;
+          animation-name: fadeOut;
+          @media #{$lg-device} {
+            max-width: 100%;
+          }
+        }
+      }
+    }    
+  }
+}

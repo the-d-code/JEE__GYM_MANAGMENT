@@ -1,0 +1,21 @@
+/*
+-----------------------------------------------------------------------
+  Brand Logo CSS
+-----------------------------------------------------------------------
+*/
+
+.brand-logo-area {
+  &.brand-logo-default-area {
+  }
+}
+
+.brand-logo-item {
+  img {
+    @include transition(all .4s ease-in-out);
+  }
+  &:hover {
+    img {
+      @include scale(1.1);
+    }
+  }
+}

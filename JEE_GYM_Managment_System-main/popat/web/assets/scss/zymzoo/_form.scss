@@ -1,0 +1,333 @@
+/*
+-----------------------------------------------------------------------
+	Form CSS
+-----------------------------------------------------------------------
+*/
+
+// Contact Form Style
+.contact-form {
+  padding-right: 7px;
+  .contact-form-wrapper {
+    .section-title {
+      margin-bottom: 38px;
+      margin-left: 0;
+      .title {
+        font-size: 32px;
+        margin-bottom: 24px;
+      }
+      .desc {
+        p {
+          color: $theme-color4;
+          font-size: 16px;
+          line-height: 1.75;
+        }
+      }
+    }
+    .form-group {
+      margin-bottom: 30px;
+      @media #{$xs-device} {
+        margin-bottom: 20px;
+      }
+      .form-control {
+        border-color: #d9d9d9;
+        border-radius: 0;
+        box-shadow: none;
+        color: #252525;
+        font-size: 16px;
+        font-weight: 400;
+        width: 100%;
+        height: 47px;
+        line-height: 47px;
+        padding: 0px 19px;
+        @include placeholder {
+          color: #c5c1c1;
+          font-weight: 400;
+        }
+      }
+      textarea {
+        border: 1px solid #d9d9d9;
+        border-radius: 0;
+        box-shadow: none;
+        color: #252525;
+        font-weight: 400;
+        font-size: 16px;
+        width: 100%;
+        height: 227px;
+        padding: 14px 20px;
+        margin-bottom: 26px;
+        @media #{$xs-device} {
+          height: 150px;
+          margin-bottom: 16px;
+        }
+        @include placeholder {
+          color: #c5c1c1;
+          font-weight: 400;
+          font-size: 16px;
+        }
+      }
+      .btn-theme {
+        border-radius: 27.5px;
+        color: $white;
+        font-size: 14px;
+        font-weight: 600;
+        width: 149px;
+        height: 55px;
+        line-height: 55px;
+        padding: 0;
+        text-transform: uppercase;
+        @media #{$xs-device} {
+          font-size: 13px;
+          width: 135px;
+          height: 45px;
+          line-height: 45px;
+        }
+        &:hover {
+          background-color: $theme-color4;
+          border-color: $theme-color4;
+        }     
+      }
+    }
+  }
+}
+
+.login-form-content {
+  .tab-pane {
+    .login-form {
+      .login-form-wrapper {
+        .form-group {
+          margin-bottom: 0;
+          .form-label {
+            margin-top: 24px;
+          }
+          .form-control {
+            border: 1px solid #ebebeb;
+            border-radius: 0;
+            box-shadow: none;
+            padding: 0 20px;
+            height: 50px;
+            line-height: 48px;
+            width: 100%;
+            &:active,
+            &:focus {
+              border-color: #bbb;
+            }
+          }
+          .form-check-input {
+            box-shadow: none;
+            border-radius: 0;
+            margin-right: 10px;
+            margin-top: 5px;
+          }
+          .btn-theme {
+            background-color: $theme-color4;
+            border-radius: 0;
+            color: $white;
+            font-family: $font-current-theme2;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 18px 30px;
+            line-height: 1;
+            letter-spacing: 1px;
+            margin-top: 17px;
+            margin-bottom: 15px;
+            width: 100%;
+            text-transform: uppercase;
+            &:hover {
+              color: $white;
+              background-color: $theme-color;
+            }
+          }
+          .btn-forgot {
+            color: $theme-color4;
+            &:hover {
+              color: $theme-color;
+              text-decoration: underline;
+            }
+          }
+          p {
+            color: $theme-color4;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-top: 15px;
+            margin-bottom: 7px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Comment Form Style
+.comment-form-wrap {
+  .comment-form-content {}
+}
+
+.form-group {
+  margin-bottom: 30px;
+  .form-control {
+    border: 1px solid #c5c1c1;
+    border-radius: 0;
+    box-shadow: none;
+    color: #252525;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 19px;
+    @include placeholder {
+      color: #c5c1c1;
+      font-size: 16px;
+    }
+  }
+  textarea {
+    &.form-control {
+      height: 227px;
+      padding: 19px 19px;
+    }
+  }
+  .btn-theme {
+    border-radius: 27.5px;
+    color: $theme-color4;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .10px;
+    width: 150px;
+    height: 55px;
+    line-height: 55px;
+    padding: 0;
+    &:hover {
+      background-color: $theme-color4;
+      color: $white;
+    }
+  }
+}
+
+// Bmi Calc Form Style
+.bmi-calc-form {
+  position: relative;
+  padding: 65px 50px;
+  @media #{$lg-device} {
+    padding: 60px 15px;
+  }
+  &:after {
+    background-color: rgb(16, 16, 16, .88);
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  .section-title {
+    margin-bottom: 52px;
+    position: relative;
+    z-index: 1;
+    .title {
+      color: $white;
+      font-size: 32px;
+      margin-bottom: 22px;
+    }
+    .desc {
+      p {
+        color: $white;
+        font-size: 16px;
+        line-height: 1.75;
+        max-width: 377px;
+        margin: 0 auto;
+      }
+    }
+  }
+  form {
+    position: relative;
+    z-index: 1;
+  }
+  .form-group {
+    margin-bottom: 41px;
+    .form-control {
+      background-color: transparent;
+      border-color: #898989;
+      border-width: 0 0 1px 0;
+      border-style: solid;
+      border-radius: 0;
+      box-shadow: none;
+      color: #d6d6d6;
+      padding-bottom: 7px;
+      padding-left: 0;
+      font-weight: $font-weight-light;
+      font-size: 14px;
+      @include placeholder {
+        color: #d6d6d6;
+        font-weight: $font-weight-light;
+        font-size: 14px;
+        line-height: 2;
+      }
+      &.form-select {
+        background-image: url('../img/icons/arrow-down-white.png');
+        background-size: inherit;
+        cursor: pointer;
+      }
+      option {
+        color: $theme-color4;
+      }
+    }
+  }
+  .bmi-calc-form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    @media #{$xss-device} {
+      flex-direction: column-reverse;
+    }
+    .form-group {
+      .btn-theme {
+        border-radius: 27.5px;
+        color: $white;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: .1px;
+        margin-top: 2px;
+        width: 149px;
+        height: 55px;
+        line-height: 55px;
+        padding: 0;
+        &:hover {
+          background-color: $white;
+          color: $theme-color4;
+        }
+      }
+    }
+    .bmi-calc-result {
+      .form-control {
+        box-shadow: none;
+        background-color: rgb(59, 59, 59, .23);
+        border: none;
+        color: $white;
+        width: 222px;
+        height: 119px;
+        padding: 0;
+        font-family: $font-current-theme2;
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 119px;
+        text-align: center;
+        @include placeholder {
+          color: $white;
+        }
+        @media #{$lg-device} {
+          margin-left: 15px;
+          width: 100%;
+        }
+        @media #{$md-device} {
+          width: 222px;
+        }
+        @media #{$xxs-device} {
+          width: 100%;
+        }
+        @media #{$xss-device} {
+          margin-bottom: 30px;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

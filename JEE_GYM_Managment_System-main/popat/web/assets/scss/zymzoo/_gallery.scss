@@ -1,0 +1,64 @@
+/*
+-----------------------------------------------------------------------
+    Gallery CSS
+-----------------------------------------------------------------------
+*/
+.gallery-area {
+  &.gallery-default-area {
+  	.section-title {
+  		margin-bottom: 61px;
+  		@media #{$lg-device} {
+  			margin-bottom: 55px;
+  		}
+  		@media #{$sm-device} {
+  			text-align: center;
+  		}
+  	}
+		.btn-theme {
+	    background-color: transparent;
+			border: 1px solid $theme-color;
+			border-radius: 25.5px;
+			color: #000;
+	    display: inline-block;
+	    font-weight: $font-weight-bold;
+	    font-size: 14px;
+	    width: 149px;
+	    height: 55px;
+	    margin-right: -97px;
+	    padding: 0;
+	    position: relative;
+	    top: 86px;
+	    line-height: 55px;
+	    text-align: center;
+	    letter-spacing: .1px;
+	    text-transform: uppercase;
+	    @media #{$xl-device} {
+	    	margin-right: 0;
+	    }
+	    &:hover {
+	    	background-color: $theme-color;
+	    	color: $white;
+	    }
+		}
+  }
+}
+.gallery-item {
+	.thumb {
+    overflow: hidden;
+    a {
+      img {
+        width: 100%;
+        @include transition(all .9s ease-in-out);
+      }
+    }
+  }
+  &:hover {
+    .thumb {
+      a {
+        img {
+          @include scale(1.15);
+        }
+      }
+    }
+  }
+}

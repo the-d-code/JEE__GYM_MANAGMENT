@@ -1,0 +1,241 @@
+/*
+-----------------------------------------------------------------------
+  Footer CSS
+-----------------------------------------------------------------------
+*/
+
+.footer-area {
+  &.default-style {
+    .footer-main {
+      padding: 135px 0 88px;
+      @media #{$lg-device} {
+        padding: 90px 0 60px;
+      }
+    }
+    .footer-bottom {
+      padding: 20px 0 19px;
+      background-color: #1d1d1d;
+      .footer-bottom-content {
+        .widget-copyright {
+          font-size: 14px;
+          font-weight: 400;
+          font-family: $font-current-theme3;
+          p {
+            color: #9c9c9c;
+            font-size: 14px;
+            letter-spacing: 1px;
+            @media #{$xss-device} {
+              font-size: 13px;
+            }
+            i {
+              color: #9c9c9c;
+              margin: 0 6px;
+              &.fa-heart {
+                color: $theme-color;
+              }
+            }
+            a {
+              color: #9c9c9c;
+              &:hover {
+                color: $theme-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .widget-item {
+      h4 {
+        color: $white;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: .25px;
+        margin-bottom: 27px;
+      }
+    }
+    .about-widget {
+      position: relative;
+      top: -19px;
+      .footer-logo {
+        img {
+          margin-bottom: 17px;
+          width: 93px;
+        }
+      }
+      p {
+        color: #e0e0e0;
+        font-size: 14px;
+        line-height: 1.644;
+        margin-bottom: 24px;
+      }
+      .opening-time {
+        .title {
+          color: $theme-color;
+          font-size: 18px;
+          margin-bottom: 10px;
+        }
+        ul {
+          li {
+            color: #e0e0e0;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .widget-menu-wrap {
+      color: #e0e0e0;
+      display: flex;
+      font-size: 14px;
+      .nav-menu {
+        display: block;
+        width: 47%;
+        li {
+          margin-bottom: 15px;
+          a {
+            color: #e0e0e0;
+            &:hover {
+              color: $theme-color;
+            }
+          }
+        }
+      }
+    }
+    .widget-contact-info {
+      margin-top: 32px;
+      .contact-info-item {
+        margin-bottom: 21px;
+        right: 13px;
+        position: relative;
+        @media #{$md-device} {
+          right: auto;
+        }
+        .icon-box {
+          position: absolute;
+          top: 0;
+          width: 29px;
+          text-align: center;
+        }
+        .content {
+          p {
+            color: #e0e0e0;
+            font-size: 14px;
+          }
+        }
+      }
+      .content {
+        padding-left: 49px;
+        .title {
+          color: $theme-color;
+          font-family: $font-current-theme1;
+          font-size: 14px;
+          margin: 0;
+          margin-bottom: 2px;
+        }
+        ul {
+          display: inline-block;
+          margin-bottom: 0;
+          li {
+            color: #e0e0e0;
+            font-size: 14px;
+            a {
+              color: #e0e0e0;
+              &:hover {
+                color: $theme-color;
+              }
+            }
+          }
+        }
+      }
+    }
+    .widget-newsletter {
+      margin-bottom: 36px;
+      p {
+        color: #e0e0e0;
+        font-weight: 300;
+        font-size: 14px;
+        margin-bottom: 0;
+        margin-right: -4px;
+        line-height: 1.644;
+      }
+      form {
+        display: inline-block;
+        position: relative;
+        margin-top: 29px;
+        @media #{$xs-device} {
+          width: 100%;
+        }
+        .form-control {
+          border: 2px solid #565758;
+          box-shadow: none;
+          background-color: transparent;
+          color: #c2c2c2;
+          font-size: 14px;
+          font-weight: $font-weight-light;
+          width: 270px;
+          height: 46px;
+          padding: 19px;
+          padding-right: 60px;
+          @media #{$lg-device} {
+            width: 100%;
+          }
+          @include placeholder {
+            color: #c2c2c2;
+            font-size: 14px;
+            font-weight: $font-weight-light;
+          }
+        }
+        .btn-theme {
+          position: absolute;
+          right: 4px;
+          height: 38px;
+          width: 50px;
+          line-height: 38px;
+          padding: 0;
+          top: 4px;
+          &:hover {
+            color: $theme-color;
+          }
+        }
+      }
+    }
+    .widget-social-icons {
+      a {
+        background-color: #e3e3e3;
+        border-radius: 10px;
+        color: #252525;
+        display: inline-block;
+        font-size: 14px;
+        height: 27px;
+        line-height: 29px;
+        margin-right: 18px;
+        text-align: center;
+        width: 27px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          background-color: $theme-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.reveal-footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  @media #{$md-device} {
+    position: relative;
+  }
+}
+
+.site-wrapper-reveal {
+  position: relative;
+  @media #{$md-device} {
+    margin-bottom: 0 !important;
+  }
+}

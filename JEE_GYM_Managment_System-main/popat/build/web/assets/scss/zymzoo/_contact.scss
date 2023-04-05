@@ -1,0 +1,135 @@
+/*
+-----------------------------------------------------------------------
+    Contact CSS
+-----------------------------------------------------------------------
+*/
+
+
+.contact-area {
+  padding: 125px 0 133px;
+  @media #{$lg-device} {
+    padding: 90px 0;
+  }
+  .section-title {
+    margin-bottom: 84px;
+    margin-left: 30px;
+    @media #{$lg-device} {
+      margin-bottom: 55px;
+    }
+    .title {
+      margin-bottom: 20px;
+    }
+    .desc {
+      p {
+        color: #787878;
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: .6px;
+      }
+    }
+  }
+}
+.contact-info-content {
+  align-items: center;
+  display: flex;
+  max-width: 865px;
+  margin: auto;
+  margin-bottom: 145px;
+  justify-content: space-between;
+  @media #{$lg-device} {
+    margin-bottom: 100px;
+  }
+  @media #{$xs-device} {
+    display: block;
+    margin-bottom: 90px;
+  }
+  .contact-info-item {
+    text-align: center;
+    @media #{$xs-device} {
+      margin-bottom: 40px;
+    }
+    .icon {
+      margin-bottom: 29px;
+    }
+    .content {
+      p {
+        color: $theme-color4;
+        font-weight: 500;
+        font-size: 15.98px;
+        line-height: 1.8;
+      }
+      a {
+        color: $theme-color4;
+        display: block;
+        font-weight: 500;
+        font-size: 15.98px;
+        margin-bottom: 1px;
+        &:hover {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+.contact-map-area {
+  height: 574px;
+  padding-left: 25px;
+  @media #{$lg-device} {
+    padding-left: 0;
+  }
+  @media #{$xs-device} {
+    height: 320px;
+  }
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+.account-login-area {
+  padding: 117px 0 121px;
+  @media #{$lg-device} {
+    padding: 78px 0 84px;
+  }
+  @media #{$sm-device} {
+    padding: 80px 0 90px;
+  }
+  .login-top {
+    .login-form-nav {
+      .nav-tabs {
+        border-bottom: 2px solid $theme-color;
+        justify-content: space-between;
+        padding-bottom: 6px;
+        .nav-link {
+          cursor: pointer;
+          color: $theme-color;
+          border: none;
+          background: none;
+          padding: 0;
+          font-size: 20px;
+          font-weight: 400;
+          font-family: $font-current-theme2;
+          letter-spacing: -0.4px;
+          &.active {
+            border: none;
+            background: none;
+            color: $black-333;
+            cursor: default;
+            font-size: 24px;
+            font-weight: 500;
+            padding: 0;
+            letter-spacing: -0.48px;
+            font-family: $font-current-theme2;
+            text-transform: uppercase;
+          }
+          &.nav-register {
+            position: relative;
+            top: -2px;
+          }
+        }
+      }
+    }
+  }
+}

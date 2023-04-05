@@ -1,0 +1,304 @@
+/*
+-----------------------------------------------------------------------
+  Testimonial CSS
+-----------------------------------------------------------------------
+*/
+.testimonial-area {
+  &.testimonial-default-area {
+    .section-title {
+      margin-bottom: 54px;
+      margin-top: 83px;
+      @media #{$md-device} {
+        margin-top: 0;
+      }
+    }
+    .bmi-calc-form {
+      .section-title {
+        margin-bottom: 50px;
+        margin-left: 10px;
+      }
+    }
+    .testimonial-content {
+      position: relative;
+      padding-right: 85px;
+      @media #{$lg-device} {
+        margin-bottom: 70px;
+      }
+      @media #{$md-device} {
+        padding-right: 0;
+      }
+      &:after {
+        content: url('../img/icons/5.png');
+        position: absolute;
+        top: -183px;
+        right: 22px;
+        @media #{$md-device} {
+          display: none;
+        }
+      }
+      .testimonial-slider-content {
+        .testimonial-slider-container {
+          padding-top: 19px;
+          margin-top: -19px;
+        }
+      }
+    }
+  }
+  &.testimonial-inner-area {
+    padding-bottom: 129px;
+    @media #{$lg-device} {
+      padding-bottom: 90px;
+    }
+    .section-title {
+      margin-bottom: 54px;
+      margin-top: 83px;
+      @media #{$md-device} {
+        margin-top: 0;
+      }
+    }
+    .testimonial-content {
+      padding-right: 85px;
+      @media #{$md-device} {
+        margin-bottom: 90px;
+        padding-right: 0;
+      }
+      .testimonial-slider-content {
+        .testimonial-slider-container {
+          padding-top: 19px;
+          margin-top: -19px;
+        }
+      }
+    }
+  }
+  &.class-testimonial-area {
+    padding: 0 0 129px;
+    @media #{$lg-device} {
+      padding: 0 0 90px;
+    }
+    .section-title {
+      margin-bottom: 54px;
+      margin-top: 83px;
+      @media #{$md-device} {
+        margin-top: 0;
+      }
+    }
+    .testimonial-content {
+      padding-right: 85px;
+      @media #{$md-device} {
+        margin-bottom: 90px;
+        padding-right: 0;
+      }
+      .testimonial-slider-content {
+        .testimonial-slider-container {
+          padding-top: 19px;
+          margin-top: -19px;
+        }
+      }
+    }
+  }
+  &.testimonial-inner-style2 {
+    padding-bottom: 126px;
+    @media #{$lg-device} {
+      padding-bottom: 90px;
+      padding-top: 50px;
+    }
+    .container {
+      max-width: 1060px;
+    }
+    .section-title {
+      margin-bottom: 78px;
+    }
+    .testimonial-content {
+      padding-right: 0;
+      .testimonial-slider-content {
+        .testimonial-slider2-container {
+          padding-top: 19px;
+          margin-top: -19px;
+          .testimonial-single {
+            @media #{$sm-device} {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.testimonial-single {
+  .client-thumb {}
+  .client-content {
+    position: relative;
+    p {
+      color: $theme-color4;
+      font-weight: $font-weight-medium;
+      font-style: italic;
+      font-size: 18px;
+      line-height: 1.7777;
+      margin-bottom: 19px;
+    }
+  }
+  .quote-icon {
+    position: absolute;
+    top: 13px;
+    left: 32%;
+    z-index: -1;
+    transform: translate(0, -38%);
+  }
+  .client-rating {}
+  .client-info {
+    .name {
+      color: $theme-color4;
+      font-size: 24px;
+      font-weight: $font-weight-semi-bold;
+      margin-bottom: 10px;
+    }
+    .designation {
+      color: #787878;
+      font-family: $font-current-theme1;
+      font-size: 16px;
+      font-weight: $font-weight-normal;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.testimonial-slider-content {
+  .testimonial-slider-container {
+    .swiper-btn {
+      &-wrap {
+        position: absolute;
+        bottom: 11px;
+        right: 7px;
+      }
+      &-next,
+      &-prev {
+        color: #dddddd;
+        cursor: pointer;
+        bottom: 0;
+        font-size: 32px;
+        float: left;
+        line-height: 1;
+        position: relative;
+        z-index: 1;
+        @include transition(all .4s ease-out);
+        &:hover {
+          color: $theme-color;
+        }
+      }
+
+      &-next {
+        align-items: center;
+        display: flex;
+        margin-left: 4px;
+        &:before {
+          background-color: #dddddd;
+          content: "";
+          height: 2px;
+          display: block;
+          left: 8px;
+          position: relative;
+          top: 1px;
+          width: 19px;
+          @include transition(all .4s ease-out);
+        }
+        &:hover {
+          &:before {
+            background-color: $theme-color;
+            width: 52px;
+          }
+        }
+      }
+      &-prev {
+        align-items: center;
+        display: flex;
+        &:after {
+          background-color: #dddddd;
+          content: "";
+          height: 2px;
+          display: block;
+          right: 8px;
+          position: relative;
+          top: 1px;
+          width: 19px;
+          @include transition(all .4s ease-out);
+        }
+        &:hover {
+          &:after {
+            background-color: $theme-color;
+            width: 52px;
+          }
+        }
+      }
+    }
+  }
+  .testimonial-slider2-container {
+    .swiper-btn {
+      &-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: 56px;
+        margin-left: 34px;
+      }
+      &-next,
+      &-prev {
+        color: #dddddd;
+        cursor: pointer;
+        bottom: 0;
+        font-size: 32px;
+        float: left;
+        line-height: 1;
+        position: relative;
+        z-index: 1;
+        @include transition(all .4s ease-out);
+        &:hover {
+          color: $theme-color;
+        }
+      }
+
+      &-next {
+        align-items: center;
+        display: flex;
+        margin-left: 4px;
+        &:before {
+          background-color: #dddddd;
+          content: "";
+          height: 2px;
+          display: block;
+          left: 8px;
+          position: relative;
+          top: 1px;
+          width: 19px;
+          @include transition(all .4s ease-out);
+        }
+        &:hover {
+          &:before {
+            background-color: $theme-color;
+            width: 52px;
+          }
+        }
+      }
+      &-prev {
+        align-items: center;
+        display: flex;
+        &:after {
+          background-color: #dddddd;
+          content: "";
+          height: 2px;
+          display: block;
+          right: 8px;
+          position: relative;
+          top: 1px;
+          width: 19px;
+          @include transition(all .4s ease-out);
+        }
+        &:hover {
+          &:after {
+            background-color: $theme-color;
+            width: 52px;
+          }
+        }
+      }
+    }
+  }
+}
